@@ -7,10 +7,6 @@ This project cleans a raw dataset of global tech layoffs using MySQL. The raw da
 Dataset:
 https://www.kaggle.com/datasets/swaptr/layoffs-2022
 
-
-Tools used 
-MySQL
-
 What I did
 
 Staged the data — copied the raw table into a staging table (layoffs_staging) so the original data stays untouched no matter what happens next.
@@ -27,3 +23,39 @@ I caught that funds_raised_millions was originally typed as INT, which rounds of
 Next step
 
 Part 2 of this project runs exploratory analysis on the cleaned table — total layoffs by industry/year, biggest single layoffs, and a rolling monthly total using a window function.
+
+
+Exploratory Data Analysis (EDA)
+
+Key Findings
+- Between March 2020 and March 2023, this dataset tracks roughly 386K layoffs
+  across ~1,900 companies in 60+ countries.
+  
+- The single largest layoff event was Google's cut of 12,000 employees in
+  January 2023; most of the largest individual events cluster in late 2022
+  and early 2023.
+  
+- Consumer was the hardest-hit industry by total people laid off, followed
+  by Retail.
+  
+- The Post-IPO company stage accounts for far more layoffs than any other
+  single stage, at roughly 205K people.
+  
+- The United States was affected far more than any other country.
+- 
+- Amazon leads the company ranking not because of one massive cut, but
+  because it had three separate layoff rounds that sum together; Google and
+  Meta each had a single very large event (12,000 and 11,000 respectively).
+  
+- 116 companies (~5% of those in the dataset) shut down entirely, laying off
+  100% of staff, ranging from small startups to well-funded mid-size firms.
+  
+- Layoffs came in two distinct waves: a sharp COVID-driven spike in
+  March–April 2020, then a much larger, sustained wave that built through
+  2022 and peaked around November 2022 and January 2023.
+  
+- Amazon appeared in the top 5 companies by layoffs for two consecutive
+  years (2022 and 2023).
+
+Tools Used
+- MySQL
